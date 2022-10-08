@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import SVG from '../assets/LOGO-01.svg'
 const LogoText = styled.h1`
 font-family: 'Akaya Telivigala', cursive;
 font-size: ${props => props.theme.fontxxxl};
@@ -22,7 +22,7 @@ const Logo = () => {
   return (
     <LogoText>
         <Link to="/">
-        I am
+        <img src={SVG} width="50" height="50" height-max="20" alt="i am logo" />
         </Link>
     </LogoText>
   )
