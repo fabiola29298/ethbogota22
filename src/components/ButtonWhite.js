@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 
 
-const Btn = styled.button`
+const Btn = styled.div`
 display: inline-block;
-background-color: ${props => props.theme.body};
-color: ${props => props.theme.text};
-outline: 10px;
-border: 5px solid #d0d0d0;
+background-color: ${props => props.theme.text};
+color: ${props => props.theme.body};
+outline: none;
+border: none;
 
 font-size: ${props => props.theme.fontsm};
 padding: 0.9rem 2.3rem;
@@ -39,13 +39,13 @@ position: relative;
 }
 `
 
-const Button = ({text, link}) => {
+const ButtonWhite = ({ text, link }) => {
   return (
-<a href={link} aria-label={text} target="_blank" rel="noreferrer" >
-<Btn>{text}</Btn>
-</a>
+    <a href={link} aria-label={text} target="_blank" rel="noreferrer" >
+      <Btn    >{text}</Btn>
+    </a>
 
   )
 }
 
-export default Button
+export default ButtonWhite

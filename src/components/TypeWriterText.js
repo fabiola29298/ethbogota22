@@ -1,9 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import Typewriter from "typewriter-effect";
 import Button from './Button';
+import ButtonWhite from './ButtonWhite';
+import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
 
-const Title = styled.h2`
+const widgetProps = {
+  actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
+  signal: "user-id-1",
+  enableTelemetry: true,
+  appName: "candyApp",
+  signalDescription: "Receive initial airdrop April 2022",
+  theme: "light",
+  debug: true, // DO NOT SET TO `true` IN PRODUCTION
+  onSuccess: (result) => console.log(result),
+  onError: ({ code, detail }) => console.log({ code, detail }),
+  onInitSuccess: () => console.log("Init successful"),
+  onInitError: (error) => console.log("Error while initialization World ID", error),
+};
+
+
+const Title = styled.h1`
+  font-weight: bold;
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
   width: 80%;
@@ -38,27 +55,6 @@ const Title = styled.h2`
 
 
 `;
-const SubTitle = styled.h3`
-  font-size: ${(props) => props.theme.fontlg};
-  text-transform: capitalize;
-  color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
-  font-weight:600;
-  margin-bottom: 1rem;
-  width: 80%;
-  align-self: flex-start;
-
-  @media (max-width: 40em) {
-    font-size: ${(props) => props.theme.fontmd};
-
-  }
-
-  @media (max-width: 48em) {
-    align-self: center;
-    text-align:center;
-  }
-
-`
-
 const ButtonContainer = styled.div`
  width: 80%;
   align-self: flex-start;
@@ -72,18 +68,30 @@ const ButtonContainer = styled.div`
     }
   }
 
-`
+`;
 const TypeWriterText = () => {
   return (
     <>
         <Title>
-        Take control of your Identity and future
+        <b>Take</b> <br></br>
+        <b>control</b> <br></br>
+        <b>of </b> your <br></br>
+        Identity <br></br>
+        and future
         </Title>
-
+      <WorldIDWidget {...widgetProps} />
+      <br></br>
     <ButtonContainer>
         <Button text="Connect Wallet" link="https://google.com" />
     </ButtonContainer>
+    <br></br>
+      <ButtonContainer>
+        <ButtonWhite text="Connect Wallet" link="https://google.com" />
+      </ButtonContainer>
+    <br></br>
+
     </>
+
   );
 };
 
