@@ -132,12 +132,12 @@ font-size: ${props => props.theme.fontsm};
 const Banner = () => {
   return (
     <Section>
-        <Title>Join the  <br /> weirdos club  </Title>
+        <Title>Join with us  <br /> Lens  </Title>
         <BtnContainer>
 
         <a href='https://discord.com/' aria-label='discord link' target="_blank" rel="noreferrer" >
         <JoiNow>
-            Join Now
+            Lens
         </JoiNow>
 </a>
 

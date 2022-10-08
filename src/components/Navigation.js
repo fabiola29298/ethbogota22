@@ -170,12 +170,11 @@ const scrollTo = (id) => {
           &nbsp;
         </HamburgerMenu>
         <Menu click={click}>
-          <MenuItem onClick={() => scrollTo('home')}  >Home</MenuItem>
-          <MenuItem onClick={() => scrollTo('about')}  >About</MenuItem>
-          <MenuItem onClick={() => scrollTo('roadmap')}  >Roadmap</MenuItem>
-          <MenuItem onClick={() => scrollTo('showcase')}  >Showcase</MenuItem>
-          <MenuItem onClick={() => scrollTo('team')}  >Team</MenuItem>
-          <MenuItem onClick={() => scrollTo('faq')}  >Faq</MenuItem>
+          <MenuItem onClick={() => scrollTo('home')}  >What is Self-Sovereign?</MenuItem>
+          <MenuItem onClick={() => scrollTo('about')}  >About us</MenuItem>
+          <MenuItem onClick={() => scrollTo('roadmap')}  >FAQ</MenuItem>
+          <MenuItem onClick={() => scrollTo('showcase')}  >Help Cender</MenuItem>
+
 
         </Menu>
 

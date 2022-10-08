@@ -77,29 +77,9 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-      Discover a new era of cool
-      <Typewriter
-        options={{
-          autoStart: true,
-          loop: true,
-        }}
-        onInit={(typewriter) => {
-          typewriter
-            .typeString(`<span class="text-1">NFTs.</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(`<span class="text-2">Collectible Items.</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .typeString(`<span class="text-3">Ape Killers!</span>`)
-            .pauseFor(2000)
-            .deleteAll()
-            .start();
-        }}
-      />
+        Take control of your Identity and future
+        </Title>
 
-    </Title>
-    <SubTitle>Bored Of Apes? Try Something New.</SubTitle>
     <ButtonContainer>
         <Button text="Connect Wallet" link="https://google.com" />
     </ButtonContainer>
