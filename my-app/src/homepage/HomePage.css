@@ -1,0 +1,30 @@
+.content-container {
+  padding: 10%;
+  height: 100vh;
+  background-color: lightgrey;
+  font-size: 64px;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.left-panel {
+  flex: 5;
+  background-color: lightyellow;
+}
+
+.middle-panel {
+  flex: 3;
+  background-color: lightblue
+}
+
+.right-panel {
+  flex: 2;
+  background-color: lightgreen;
+}
+
+.box {
+  border: 1px solid black;
+}

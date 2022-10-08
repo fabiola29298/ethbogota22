@@ -8,22 +8,21 @@ import Layout from './layout/Layout'
 import Home from './components/pages/Home'
 import AboutUs from './components/pages/AboutUs'
 import ContactUs from './components/pages/ContactUs'
+import GlobalStyles from './styles'
+import { light } from './styles/Themes'
+import { ThemeProvider } from 'styled-components';
+
 
 import './App.css';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Layout>
-          <Switch>
-            <Route path={'/AboutUs'} component={AboutUs}></Route>
-            <Route path={'/ContactUs'} component={ContactUs}></Route>
-            <Route path={'/'} component={Home}></Route>
-          </Switch>
-        </Layout>
-      </Router>
-    </div>
+    <>
+      <GlobalStyles/>
+      <ThemeProvider theme={light}>
+      Appp file
+      </ThemeProvider>
+    </>
   );
 }
 
