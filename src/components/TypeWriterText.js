@@ -27,19 +27,7 @@ const Title = styled.h1`
   color: ${(props) => props.theme.text};
   align-self: flex-start;
 
-  span {
-    text-transform: uppercase;
-    font-family: "Akaya Telivigala", cursive;
-  }
-  .text-1{
-      color: blue;
-  }
-  .text-2{
-      color: orange;
-  }
-  .text-3{
-      color: red;
-  }
+
 
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxl};
@@ -69,25 +57,42 @@ const ButtonContainer = styled.div`
   }
 
 `;
+const ButtonContainer2 = styled.div`
+ width: 80%;
+  align-self: flex-start;
+
+  @media (max-width: 48em) {
+    align-self: center;
+    text-align:center;
+
+    button{
+      margin: 0 auto;
+    }
+  }
+
+`;
+
 const TypeWriterText = () => {
   return (
     <>
         <Title>
+        <span class="text-1">NFTs.</span>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
         Identity <br></br>
         and future
         </Title>
+
       <WorldIDWidget {...widgetProps} />
       <br></br>
     <ButtonContainer>
-        <Button text="Connect Wallet" link="https://google.com" />
+        <Button text="Connect Wallet to login" link="https://google.com" />
     </ButtonContainer>
     <br></br>
-      <ButtonContainer>
-        <ButtonWhite text="Connect Wallet" link="https://google.com" />
-      </ButtonContainer>
+      <ButtonContainer2>
+        <Button text="Create ID" link="https://google.com" />
+      </ButtonContainer2>
     <br></br>
 
     </>

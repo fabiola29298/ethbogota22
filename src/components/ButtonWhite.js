@@ -3,19 +3,29 @@ import styled from 'styled-components'
 
 
 
-const Btn = styled.div`
+
+const JoiNow = styled.button`
 display: inline-block;
-background-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
+background-color: ${props => props.theme.body};
+color: ${props => props.theme.text};
 outline: none;
 border: none;
-
-font-size: ${props => props.theme.fontsm};
-padding: 0.9rem 2.3rem;
+font-weight: 600;
+font-size: ${props => props.theme.fontlg};
+padding: 1.5rem 3rem;
 border-radius: 50px;
 cursor: pointer;
 transition: all 0.2s ease;
 position: relative;
+
+@media (max-width: 48em){
+    padding: 1rem 2rem;
+}
+@media (max-width: 30em){
+    padding: 0.5rem 2rem;
+font-size: ${props => props.theme.fontsm};
+
+}
 &:hover{
     transform: scale(0.9);
 }
@@ -26,7 +36,7 @@ position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    border: 2px solid ${props => props.theme.text};
+    border: 2px solid ${props => props.theme.body};
     width: 100%;
     height: 100%;
     border-radius: 50px;
@@ -42,7 +52,7 @@ position: relative;
 const ButtonWhite = ({ text, link }) => {
   return (
     <a href={link} aria-label={text} target="_blank" rel="noreferrer" >
-      <Btn    >{text}</Btn>
+      <JoiNow    >{text}</JoiNow>
     </a>
 
   )
