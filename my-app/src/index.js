@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import HomePage from "./homepage/HomePage"
-import AboutPage from "./aboutpage/AboutPage"
-import Header from "./common/Header"
+import App from "./App";
 
 ReactDOM.render(
 
-  <HomePage />,
+  <App />,
   document.getElementById('root')
 );
