@@ -24,7 +24,7 @@ const Title = styled.h1`
   font-weight: bold;
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
-  width: 80%;
+  width: 100%;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
 
@@ -87,7 +87,7 @@ const TypeWriterText = () => {
         <Title>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
-        <b>of </b> your <br></br>
+        <c>of </c> your <br></br>
         Identity <br></br>
         and future
         </Title>

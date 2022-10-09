@@ -147,7 +147,7 @@ button{
 
 const Mint = () => {
   return (
-    <Section id="form2">
+    <Section id="Mint">
     <Container>
         <Box>
           <Title>

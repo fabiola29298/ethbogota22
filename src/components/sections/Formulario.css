@@ -52,8 +52,8 @@ input {
 /* ==================== */
 
 .main {
-  width: 680px;
-  background-color: var(--cor-branco);
+  width: 95%;
+  background-color: white;
   box-shadow: var(--sombra-padrao);
   border-radius: var(--borda-radius);
   padding: 2rem;
