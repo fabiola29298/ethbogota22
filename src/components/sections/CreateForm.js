@@ -5,7 +5,6 @@ import Button from '../Button'
 import {dark} from '../../styles/Theme';
 import Loading from '../Loading';
 import Formulario from './Formulario';
-import Metamask from './metamask';
 
 const Section = styled.section`
 min-height: 100vh;
@@ -128,42 +127,26 @@ font-weight:400;
 }
 
 `
-const ButtonContainer = styled.div`
- width: 80%;
- margin: 1rem auto;
- display: flex;
-  align-self: flex-start;
 
-  @media (max-width: 64em){
-width: 100%;
-
-button{
-  margin: 0 auto;
-}
-}
-
-`
-
-const Wallet = () => {
+const CreateForm = () => {
   return (
-    <Section id="Wallet">
+    <Section id="about">
       <Container>
 
         <Box>
         <Title>
-            Connet<br />Wallet
+            Create<br /> & mint your ID
         </Title>
         <SubText>
         </SubText>
         <SubTextLight>
-            By connectiong your walllet, you agree to our
-            Terms of Service and our Privacy Policy.
+            Fill the form and mint your ID.
         </SubTextLight>
-        </Box>
-        <Metamask></Metamask>
+         </Box>
+        <Formulario></Formulario>
       </Container>
     </Section>
   )
 }
 
-export default Wallet
+export default CreateForm

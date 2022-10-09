@@ -1,11 +1,32 @@
-import React, { lazy, Suspense } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-// import Carousel from '../Carousel'
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
+
 import Button from '../Button'
-import {dark} from '../../styles/Theme';
+import { dark } from '../../styles/Theme';
 import Loading from '../Loading';
 import Formulario from './Formulario';
 
+import Minamask from './mina';
+
+const Container = styled.div`
+width: 75%;
+margin: 2rem auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+border-bottom: 1px solid ${(props) => props.theme.text};
+
+@media (max-width: 48em) {
+width: 90%;
+
+h1{
+font-size: ${props => props.theme.fontxxxl};
+
+}
+}
+`
 const Section = styled.section`
 min-height: 100vh;
 width: 100%;
@@ -16,34 +37,6 @@ align-items: center;
 position: relative;
 overflow: hidden;
 
-`
-const Container = styled.div`
-width: 75%;
-margin: 0 auto;
-/* background-color: lightblue; */
-
-display: flex;
-justify-content: center;
-align-items: center;
-@media (max-width: 70em){
-  width: 85%;
-}
-
-@media (max-width: 64em){
-  width: 100%;
-  flex-direction: column;
-
-  &>*:last-child{
-    width: 80%;
-  }
-}
-@media (max-width: 40em){
-
-
-  &>*:last-child{
-    width: 90%;
-  }
-}
 `
 const Box = styled.div`
 width: 50%;
@@ -127,47 +120,30 @@ font-weight:400;
 }
 
 `
-const ButtonContainer = styled.div`
- width: 80%;
- margin: 1rem auto;
- display: flex;
-  align-self: flex-start;
-
-  @media (max-width: 64em){
-width: 100%;
-
-button{
-  margin: 0 auto;
-}
-}
-
-`
-
-const About = () => {
+const Mint = () => {
   return (
-    <Section id="about">
-      <Container>
-
+    <Section id="Mint">
+    <Container>
         <Box>
-        <Title>
-            Connect <br /> Wallet.
-        </Title>
-        <SubText>
-            By connectiong your walllet, you agree to our
-        </SubText>
-        <SubTextLight>
-            Terms of Service and our Privacy Policy.
-        </SubTextLight>
-        <ButtonContainer>
-        <ThemeProvider theme={dark}>
-        <Button text="Metamask" link="#" />
-        </ThemeProvider>
-        </ButtonContainer>
-         </Box>
-        <Formulario></Formulario>
-      </Container>
-    </Section>
-  )
-}
+          <Title>
+            Where do
+            you want to
+            Mint
+          </Title>
+          <SubText>
 
-export default About
+          </SubText>
+          <SubTextLight>
+            By connectiong your walllet, you agree to our
+            Terms of Service and our Privacy Policy.
+          </SubTextLight>
+
+        </Box>
+
+        <Minamask></Minamask>
+      </Container >
+    </Section>
+  );
+};
+
+export default Mint;
