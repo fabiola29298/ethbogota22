@@ -4,12 +4,12 @@ import {
   walletconnect,
   walletlink,
   activateInjectedProvider,
-} from "./../utils/wallet_connector";
+} from "../utils/wallet-connectors";
 import { useWeb3React } from "@web3-react/core";
 import { LogoutIcon } from "@heroicons/react/outline";
-import http from "./utils/http";
+import http from "../utils/http";
 
-export default function Home() {
+export default function WallConn() {
   const { active, account, library, connector, activate, deactivate } =
     useWeb3React();
   const [token, setToken] = useState(null);

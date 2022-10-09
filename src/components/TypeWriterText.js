@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Button from "./Button";
 import ButtonWhite from "./ButtonWhite";
 import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
-import { ConnectButton, useAccount } from "@web3modal/react";
+import { ConnectButton, useConnectModal } from "@web3modal/react";
+import { useAccount } from "@web3modal/ethereum";
 
 const widgetProps = {
   actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
@@ -67,42 +68,44 @@ const ButtonContainer = styled.div`
   }
 `;
 const ButtonContainer2 = styled.div`
- width: 80%;
+  width: 80%;
   align-self: flex-start;
 
   @media (max-width: 48em) {
     align-self: center;
-    text-align:center;
+    text-align: center;
 
-    button{
+    button {
       margin: 0 auto;
     }
   }
-
 `;
 
 const TypeWriterText = () => {
+  const { isOpen, open, close } = useConnectModal();
+
   return (
     <>
-        <Title>
+      <Title>
         <span class="text-1">NFTs.</span>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
         Identity <br></br>
         and future
-        </Title>
+      </Title>
 
       <br></br>
-    <ButtonContainer>
-        <Button text="Connect Wallet to login" link="https://google.com" />
-    </ButtonContainer>
-    <br></br>
+      {/* <ConnectButton /> */}
+      <ButtonContainer>
+        {/* <Button text="Connect Wallet to login" link="https://google.com" /> */}
+        <button onClick={open}>Connect Wallet to login</button>
+      </ButtonContainer>
+      <br></br>
       <ButtonContainer2>
         <Button text="Create ID" link="https://google.com" />
       </ButtonContainer2>
-    <br></br>
-
+      <br></br>
     </>
   );
 };

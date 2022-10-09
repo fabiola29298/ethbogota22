@@ -26,7 +26,12 @@ import { ConfigOptions } from "@web3modal/react";
 import { Web3Modal } from "@web3modal/react";
 import Form2 from "./components/sections/Form2";
 import Wallet from "./components/sections/wallet";
+import { Web3ReactProvider } from "@web3-react/core";
+import Web3 from "web3";
 
+function getLibrary(provider) {
+  return new Web3(provider);
+}
 const config = {
   projectId: "1ddbee9a91fd7c5851370409ec76d503",
   theme: "dark",
@@ -36,7 +41,7 @@ const config = {
   },
 };
 
-function App() {
+function App({ Component, pageProps }) {
   return (
     <>
       <main>
@@ -46,9 +51,8 @@ function App() {
           <Navigation />
           <Home />
           <Form2 />
-          <Wallet/>
+          {/* <Wallet /> */}
           <About />
-
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}
           <ScrollToTop /> {/* </Suspense> */}
