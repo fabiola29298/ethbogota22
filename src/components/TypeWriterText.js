@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
 import { ConnectButton, useConnectModal } from "@web3modal/react";
 import { useAccount } from "@web3modal/react";
 
@@ -23,7 +24,7 @@ const Title = styled.h1`
   font-weight: bold;
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
-  width: 100%;
+  width: 80%;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
 
@@ -80,7 +81,6 @@ const ButtonContainer2 = styled.div`
 `;
 
 const TypeWriterText = () => {
-  // const { isOpen, open, close } = useConnectModal();
   const { address, isConnected } = useAccount();
   console.log(address);
 
@@ -88,25 +88,20 @@ const TypeWriterText = () => {
     <>
       <Title>
         <span class="text-1">NFTs.</span>
-        <Title>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
-        <c>of </c> your <br></br>
+        <b>of </b> your <br></br>
         Identity <br></br>
       </Title>
       <br></br>
-              <ConnectButton />
-
+      <ConnectButton />
+      <br></br>
       <br></br>
       <p>{isConnected ? address : "Waiting..."}</p>
-              <br></br>
-
-    <ButtonContainer>
-        <Button text="Connect Wallet to login" link="#Inicio" />
-    </ButtonContainer>
-    <br></br>
+      <br></br>
+      <br></br>
       <ButtonContainer2>
-        <Button text="Create ID" link="#HumanityProof" />
+        <Button text="Create ID" link="https://google.com" />
       </ButtonContainer2>
       <br></br>
     </>
