@@ -123,3 +123,11 @@ input {
   background-color: var(--cor-cancelar);
   color: var(--cor-branco);
 }
+.line{
+  flex-direction: column;
+
+}
+.lineVertical img {
+   margin: 0 15px;
+
+}

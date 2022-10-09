@@ -128,7 +128,7 @@ const Mint = () => {
           <Title>
             Where do
             you want to
-            Minta
+            Mint
           </Title>
           <SubText>
 

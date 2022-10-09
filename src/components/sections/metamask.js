@@ -7,20 +7,43 @@ import { FormFooter } from "../Form/FormFooter";
 
 export default function Metamas() {
   return (
-    <main className="main">
-      <input type="button" value="Connect Wallet" onclick="connect();"></input>
-      <h1>0x228...C0B5</h1>
-      <Button text="Wallet Connect  " link="#" />
-      <br /><br />
-      <Button text="Coinbase Wallet " link="#" />
-      <br /><br />
-      <Button text="ENS ID          " link="#" />
-      <br /><br />
-      <Button text="Metamask        " link="#" />
+    <div className="main">
 
-      <FormFooter>
-        <Button text="Submit" link="#" />
-      </FormFooter>
-    </main>
+      <br /><br />
+      <div className="lineVertical" >
+        <img src="https://raw.githubusercontent.com/fabiola29298/ethbogota22/main/src/assets/WALLECTCONNECT.png"
+          width="40px" height="100%" alt="Imagen de portada " />
+        <Button text="Wallet Connect  " link="#" />
+      </div>
+
+      <br /><br />
+      <div className="lineVertical" >
+        <img src="https://raw.githubusercontent.com/fabiola29298/ethbogota22/main/src/assets/COINBASEWALLET.png"
+          width="40px" height="100%" alt="Imagen de portada " />
+        <Button text="Coinbase Wallet  " link="#" />
+      </div>
+
+      <br /><br />
+      <div className="lineVertical" >
+        <img src="https://raw.githubusercontent.com/fabiola29298/ethbogota22/main/src/assets/ENSID.png"
+          width="40px" height="100%" alt="Imagen de portada " />
+        <Button text="ENS ID " link="#" />
+      </div>
+
+      <br /><br />
+      <div className="lineVertical" >
+        <img src="https://raw.githubusercontent.com/fabiola29298/ethbogota22/main/src/assets/METAMASK.png"
+          width="40px" height="100%" alt="Imagen de portada " />
+        <Button text="Metamask " link="#" />
+      </div>
+
+      <div className="line">
+
+        <FormFooter>
+          <Button text="Submit" link="#" />
+        </FormFooter>
+
+      </div>
+    </div>
   );
 }
