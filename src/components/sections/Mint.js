@@ -8,34 +8,25 @@ import Loading from '../Loading';
 import Formulario from './Formulario';
 
 import Minamask from './mina';
-const Container = styled.div`
-cursor: pointer;
-padding: 1rem 0.5rem;
-display: flex;
-flex-direction: column;
-border-bottom: 1px solid ${props => props.theme.carouselColor};
-margin: 3rem 0;
 
-@media (max-width: 48em){
-    margin: 2rem 0;
+const Container = styled.div`
+width: 75%;
+margin: 2rem auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+border-bottom: 1px solid ${(props) => props.theme.text};
+
+@media (max-width: 48em) {
+width: 90%;
+
+h1{
+font-size: ${props => props.theme.fontxxxl};
 
 }
+}
 `
-const widgetProps = {
-  actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
-  signal: "user-id-1",
-  enableTelemetry: true,
-  appName: "candyApp",
-  signalDescription: "Receive initial airdrop April 2022",
-  theme: "light",
-  debug: true, // DO NOT SET TO `true` IN PRODUCTION
-  onSuccess: (result) => console.log(result),
-  onError: ({ code, detail }) => console.log({ code, detail }),
-  onInitSuccess: () => console.log("Init successful"),
-  onInitError: (error) =>
-    console.log("Error while initialization World ID", error),
-};
-
 const Section = styled.section`
 min-height: 100vh;
 width: 100%;
@@ -129,22 +120,6 @@ font-weight:400;
 }
 
 `
-const ButtonContainer = styled.div`
- width: 80%;
- margin: 1rem auto;
- display: flex;
-  align-self: flex-start;
-
-  @media (max-width: 64em){
-width: 100%;
-
-button{
-  margin: 0 auto;
-}
-}
-
-`
-
 const Mint = () => {
   return (
     <Section id="Mint">

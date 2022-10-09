@@ -1,7 +1,7 @@
 import React from "react";
 import "./Formulario.css";
 
-import  Button  from "../Button";
+import Button from "../../components/Button";
 import { TextInput } from "../TextInput";
 import { FormFooter } from "../Form/FormFooter";
 
@@ -26,8 +26,8 @@ export default function Worldcoin() {
   return (
     <main className="main">
       <WorldIDWidget {...widgetProps} />
-      <br></br>
-      <Button text="Submit" link="#" />
-    </main>
+      <FormFooter>
+        <Button text="Submit" link="#" />
+      </FormFooter> </main>
   );
 }
