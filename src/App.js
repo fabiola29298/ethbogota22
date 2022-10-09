@@ -49,7 +49,7 @@ function App() {
           <ScrollToTop /> {/* </Suspense> */}
         </ThemeProvider>
       </main>
-      <Web3Modal config={config} />
+      <Web3Modal config={config} /> {/* envía el config al walletconnect */}
     </>
   );
 }
