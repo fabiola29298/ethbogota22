@@ -1,12 +1,28 @@
 import React, { lazy, Suspense } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
 
 import Button from '../Button'
 import { dark } from '../../styles/Theme';
 import Loading from '../Loading';
 import Formulario from './Formulario';
+import Worldcoin from './Worldcoin';
 import MultiplePage from "../MultiplePage";
+import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
+
+const widgetProps = {
+  actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
+  signal: "user-id-1",
+  enableTelemetry: true,
+  appName: "candyApp",
+  signalDescription: "Receive initial airdrop April 2022",
+  theme: "light",
+  debug: true, // DO NOT SET TO `true` IN PRODUCTION
+  onSuccess: (result) => console.log(result),
+  onError: ({ code, detail }) => console.log({ code, detail }),
+  onInitSuccess: () => console.log("Init successful"),
+  onInitError: (error) =>
+    console.log("Error while initialization World ID", error),
+};
 
 const Section = styled.section`
 min-height: 100vh;
@@ -100,22 +116,15 @@ const HumanityProof = () => {
     <Section id="HumanityProof">
     <Container>
         <Box>
-          <Suspense fallback={<Loading />}>
-            <Title>
+          <Title>
               Humanity Proof
             </Title>
             <SubTextLight>
               This is the beginning of your ID process,
               help us know you’re human..
             </SubTextLight>
-            </Suspense>
-        </Box>
-        <Box>
-          <Suspense fallback={<Loading />}>
-
-            <MultiplePage /></Suspense>
-
-        </Box>
+         </Box>
+        <Worldcoin />
       </Container >
     </Section>
   );

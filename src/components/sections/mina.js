@@ -8,8 +8,8 @@ import { FormFooter } from "../Form/FormFooter";
 
 export default function Minamask() {
   return (
-    <main className="main">
-      <h1>minaaa</h1>
-    </main>
+    <div className="main">
+      <h6>minaaa</h6>
+    </div>
   );
 }

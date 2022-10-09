@@ -127,21 +127,6 @@ font-weight:400;
 }
 
 `
-const ButtonContainer = styled.div`
- width: 80%;
- margin: 1rem auto;
- display: flex;
-  align-self: flex-start;
-
-  @media (max-width: 64em){
-width: 100%;
-
-button{
-  margin: 0 auto;
-}
-}
-
-`
 
 const CreateForm = () => {
   return (

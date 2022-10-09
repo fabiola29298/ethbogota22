@@ -10,7 +10,7 @@ const imagen = '../../assets/back.png'
 const Section = styled.section`
 min-height: 100vh;
 width: 100vw;
-background-image: url("../../assets/back.png");
+
 position: relative;
 color: ${(props) => props.theme.text};
 

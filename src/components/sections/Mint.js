@@ -153,7 +153,7 @@ const Mint = () => {
           <Title>
             Where do
             you want to
-            Mint
+            Minta
           </Title>
           <SubText>
 
@@ -165,8 +165,8 @@ const Mint = () => {
 
         </Box>
 
+        <Minamask></Minamask>
       </Container >
-      <Minamask></Minamask>
     </Section>
   );
 };

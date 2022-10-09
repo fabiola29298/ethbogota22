@@ -159,9 +159,9 @@ const Wallet = () => {
             By connectiong your walllet, you agree to our
             Terms of Service and our Privacy Policy.
         </SubTextLight>
-         </Box>
+        </Box>
+        <Metamask></Metamask>
       </Container>
-      <Metamask></Metamask>
     </Section>
   )
 }
