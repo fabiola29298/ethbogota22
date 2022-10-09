@@ -1,5 +1,3 @@
-
-
 import GlobalStyles from "./styles/GlobalStyles";
 import { light } from "./styles/Theme";
 import { ThemeProvider } from "styled-components";
@@ -24,22 +22,35 @@ import About from "./components/sections/About";
 import Home from "./components/sections/Home";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { ConfigOptions } from "@web3modal/react";
+import { Web3Modal } from "@web3modal/react";
+
+const config = {
+  projectId: "1ddbee9a91fd7c5851370409ec76d503",
+  theme: "dark",
+  accentColor: "default",
+  ethereum: {
+    appName: "web3Modal",
+  },
+};
 
 function App() {
   return (
-    <main>
-      <GlobalStyles />
-      <ThemeProvider theme={light}>
-        {/* <Suspense fallback={<Loading />}> */}
+    <>
+      <main>
+        <GlobalStyles />
+        <ThemeProvider theme={light}>
+          {/* <Suspense fallback={<Loading />}> */}
           <Navigation />
           <Home />
           <About />
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}
-          <ScrollToTop />{" "}
-        {/* </Suspense> */}
-      </ThemeProvider>
-    </main>
+          <ScrollToTop /> {/* </Suspense> */}
+        </ThemeProvider>
+      </main>
+      <Web3Modal config={config} /> {/* envía el config al walletconnect */}
+    </>
   );
 }
 
