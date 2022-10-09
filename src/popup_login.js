@@ -7,7 +7,7 @@ import {
 } from "./../utils/wallet_connector";
 import { useWeb3React } from "@web3-react/core";
 import { LogoutIcon } from "@heroicons/react/outline";
-// import http from "../utils/http";
+import http from "./utils/http";
 
 export default function Home() {
   const { active, account, library, connector, activate, deactivate } =
