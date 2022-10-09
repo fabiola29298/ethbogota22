@@ -24,6 +24,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { ConfigOptions } from "@web3modal/react";
 import { Web3Modal } from "@web3modal/react";
+import Form2 from "./components/sections/Form2";
 
 const config = {
   projectId: "1ddbee9a91fd7c5851370409ec76d503",
@@ -43,7 +44,9 @@ function App() {
           {/* <Suspense fallback={<Loading />}> */}
           <Navigation />
           <Home />
+          <Form2 />
           <About />
+
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}
           <ScrollToTop /> {/* </Suspense> */}

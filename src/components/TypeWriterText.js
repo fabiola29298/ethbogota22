@@ -28,9 +28,6 @@ const Title = styled.h1`
   color: ${(props) => props.theme.text};
   align-self: flex-start;
 
-<<<<<<< HEAD
-
-=======
   span {
     text-transform: uppercase;
     font-family: "Akaya Telivigala", cursive;
@@ -44,7 +41,6 @@ const Title = styled.h1`
   .text-3 {
     color: red;
   }
->>>>>>> 4ee468fc179f7d724ba696e5357f4a456b51ca0d
 
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxl};
@@ -88,21 +84,15 @@ const ButtonContainer2 = styled.div`
 const TypeWriterText = () => {
   return (
     <>
-<<<<<<< HEAD
         <Title>
         <span class="text-1">NFTs.</span>
-=======
-      <Title>
->>>>>>> 4ee468fc179f7d724ba696e5357f4a456b51ca0d
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
         Identity <br></br>
         and future
-<<<<<<< HEAD
         </Title>
 
-      <WorldIDWidget {...widgetProps} />
       <br></br>
     <ButtonContainer>
         <Button text="Connect Wallet to login" link="https://google.com" />
@@ -113,20 +103,6 @@ const TypeWriterText = () => {
       </ButtonContainer2>
     <br></br>
 
-=======
-      </Title>
-      <WorldIDWidget {...widgetProps} />
-      <br></br>
-      {/* <ButtonContainer>
-        <Button text="Connect Wallet" link="https://google.com" />
-    </ButtonContainer> */}
-      <ConnectButton />
-      <br></br>
-      <ButtonContainer>
-        <ButtonWhite text="Connect Wallet" link="https://google.com" />
-      </ButtonContainer>
-      <br></br>
->>>>>>> 4ee468fc179f7d724ba696e5357f4a456b51ca0d
     </>
   );
 };
