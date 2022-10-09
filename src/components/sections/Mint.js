@@ -6,6 +6,8 @@ import Button from '../Button'
 import { dark } from '../../styles/Theme';
 import Loading from '../Loading';
 import Formulario from './Formulario';
+
+import Minamask from './mina';
 const Container = styled.div`
 cursor: pointer;
 padding: 1rem 0.5rem;
@@ -143,28 +145,30 @@ button{
 
 `
 
-const Form2 = () => {
+const Mint = () => {
   return (
     <Section id="form2">
     <Container>
         <Box>
           <Title>
-            Humanity Proof
+            Where do
+            you want to
+            Mint
           </Title>
           <SubText>
 
           </SubText>
           <SubTextLight>
-            This is the beginning of your ID process,
-            help us know you’re human..
+            By connectiong your walllet, you agree to our
+            Terms of Service and our Privacy Policy.
           </SubTextLight>
-          <WorldIDWidget {...widgetProps} />
 
         </Box>
 
       </Container >
+      <Minamask></Minamask>
     </Section>
   );
 };
 
-export default Form2;
+export default Mint;

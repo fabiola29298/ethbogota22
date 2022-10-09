@@ -150,19 +150,13 @@ const About = () => {
 
         <Box>
         <Title>
-            Connect <br /> Wallet.
+            Create<br /> & mint your ID
         </Title>
         <SubText>
-            By connectiong your walllet, you agree to our
         </SubText>
         <SubTextLight>
-            Terms of Service and our Privacy Policy.
+            Fill the form and mint your ID.
         </SubTextLight>
-        <ButtonContainer>
-        <ThemeProvider theme={dark}>
-        <Button text="Metamask" link="#" />
-        </ThemeProvider>
-        </ButtonContainer>
          </Box>
         <Formulario></Formulario>
       </Container>

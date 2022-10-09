@@ -1,38 +1,11 @@
-import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
-
+import React, { lazy, Suspense } from 'react'
+import styled, { ThemeProvider } from 'styled-components'
+// import Carousel from '../Carousel'
 import Button from '../Button'
-import { dark } from '../../styles/Theme';
+import {dark} from '../../styles/Theme';
 import Loading from '../Loading';
 import Formulario from './Formulario';
-const Container = styled.div`
-cursor: pointer;
-padding: 1rem 0.5rem;
-display: flex;
-flex-direction: column;
-border-bottom: 1px solid ${props => props.theme.carouselColor};
-margin: 3rem 0;
-
-@media (max-width: 48em){
-    margin: 2rem 0;
-
-}
-`
-const widgetProps = {
-  actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
-  signal: "user-id-1",
-  enableTelemetry: true,
-  appName: "candyApp",
-  signalDescription: "Receive initial airdrop April 2022",
-  theme: "light",
-  debug: true, // DO NOT SET TO `true` IN PRODUCTION
-  onSuccess: (result) => console.log(result),
-  onError: ({ code, detail }) => console.log({ code, detail }),
-  onInitSuccess: () => console.log("Init successful"),
-  onInitError: (error) =>
-    console.log("Error while initialization World ID", error),
-};
+import Metamask from './metamask';
 
 const Section = styled.section`
 min-height: 100vh;
@@ -44,6 +17,34 @@ align-items: center;
 position: relative;
 overflow: hidden;
 
+`
+const Container = styled.div`
+width: 75%;
+margin: 0 auto;
+/* background-color: lightblue; */
+
+display: flex;
+justify-content: center;
+align-items: center;
+@media (max-width: 70em){
+  width: 85%;
+}
+
+@media (max-width: 64em){
+  width: 100%;
+  flex-direction: column;
+
+  &>*:last-child{
+    width: 80%;
+  }
+}
+@media (max-width: 40em){
+
+
+  &>*:last-child{
+    width: 90%;
+  }
+}
 `
 const Box = styled.div`
 width: 50%;
@@ -143,28 +144,26 @@ button{
 
 `
 
-const Form2 = () => {
+const Wallet = () => {
   return (
-    <Section id="form2">
-    <Container>
+    <Section id="Wallet">
+      <Container>
+
         <Box>
-          <Title>
-            Humanity Proof
-          </Title>
-          <SubText>
-
-          </SubText>
-          <SubTextLight>
-            This is the beginning of your ID process,
-            help us know you’re human..
-          </SubTextLight>
-          <WorldIDWidget {...widgetProps} />
-
-        </Box>
-
-      </Container >
+        <Title>
+            Connet<br />Wallet
+        </Title>
+        <SubText>
+        </SubText>
+        <SubTextLight>
+            By connectiong your walllet, you agree to our
+            Terms of Service and our Privacy Policy.
+        </SubTextLight>
+         </Box>
+      </Container>
+      <Metamask></Metamask>
     </Section>
-  );
-};
+  )
+}
 
-export default Form2;
+export default Wallet
