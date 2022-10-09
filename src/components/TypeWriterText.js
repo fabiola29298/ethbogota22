@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Button from './Button';
-import ButtonWhite from './ButtonWhite';
+import Button from "./Button";
+import ButtonWhite from "./ButtonWhite";
 import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
+import { ConnectButton, useAccount } from "@web3modal/react";
 
 const widgetProps = {
   actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
@@ -15,9 +16,9 @@ const widgetProps = {
   onSuccess: (result) => console.log(result),
   onError: ({ code, detail }) => console.log({ code, detail }),
   onInitSuccess: () => console.log("Init successful"),
-  onInitError: (error) => console.log("Error while initialization World ID", error),
+  onInitError: (error) =>
+    console.log("Error while initialization World ID", error),
 };
-
 
 const Title = styled.h1`
   font-weight: bold;
@@ -31,67 +32,62 @@ const Title = styled.h1`
     text-transform: uppercase;
     font-family: "Akaya Telivigala", cursive;
   }
-  .text-1{
-      color: blue;
+  .text-1 {
+    color: blue;
   }
-  .text-2{
-      color: orange;
+  .text-2 {
+    color: orange;
   }
-  .text-3{
-      color: red;
+  .text-3 {
+    color: red;
   }
 
   @media (max-width: 70em) {
     font-size: ${(props) => props.theme.fontxl};
-
   }
   @media (max-width: 48em) {
     align-self: center;
-    text-align:center;
+    text-align: center;
   }
-  @media (max-width: 40em){
+  @media (max-width: 40em) {
     width: 90%;
   }
-
-
 `;
 const ButtonContainer = styled.div`
- width: 80%;
+  width: 80%;
   align-self: flex-start;
 
   @media (max-width: 48em) {
     align-self: center;
-    text-align:center;
+    text-align: center;
 
-    button{
+    button {
       margin: 0 auto;
     }
   }
-
 `;
 const TypeWriterText = () => {
   return (
     <>
-        <Title>
+      <Title>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
         Identity <br></br>
         and future
-        </Title>
+      </Title>
       <WorldIDWidget {...widgetProps} />
       <br></br>
-    <ButtonContainer>
+      {/* <ButtonContainer>
         <Button text="Connect Wallet" link="https://google.com" />
-    </ButtonContainer>
-    <br></br>
+    </ButtonContainer> */}
+      <ConnectButton />
+      <br></br>
       <ButtonContainer>
         <ButtonWhite text="Connect Wallet" link="https://google.com" />
       </ButtonContainer>
-    <br></br>
-
+      <br></br>
     </>
-
   );
 };
 
