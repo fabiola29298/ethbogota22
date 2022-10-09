@@ -1,7 +1,7 @@
 import React from "react";
 import "./Formulario.css";
 
-import { Button } from "./Button";
+import  Button  from "../../components/Button";
 import { TextInput } from "../TextInput";
 import { FormFooter } from "../Form/FormFooter";
 
@@ -14,10 +14,9 @@ export default function Formulario() {
         <TextInput titulo="Last Name* " nome="lastName" />
         <TextInput titulo="Etnicity" nome="etnicity" />
         <TextInput titulo="Birth date* " nome="birthDate" />
-        <TextInput titulo="Upload ID photo " nome="photo" />
+        <Button text="Upload ID photo" link="#" />
         <FormFooter>
-          <Button cor="#7209b7" titulo="Submit" onClick={() => { }} />
-          <Button cor="#fca311" titulo="Clear" onClick={() => { }} />
+          <Button text="Submit" link="#" />
         </FormFooter>
       </form>
     </main>

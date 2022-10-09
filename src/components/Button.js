@@ -5,10 +5,10 @@ import styled from 'styled-components'
 
 const Btn = styled.button`
 display: inline-block;
-background-color: ${props => props.theme.body};
-color: ${props => props.theme.text};
+background-color: ${props => props.theme.text};
+color: ${props => props.theme.body};
 outline: 10px;
-border: 5px solid #d0d0d0;
+border: none;
 
 font-size: ${props => props.theme.fontsm};
 padding: 0.9rem 2.3rem;

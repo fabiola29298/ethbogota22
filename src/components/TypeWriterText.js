@@ -85,7 +85,6 @@ const TypeWriterText = () => {
   return (
     <>
         <Title>
-        <span class="text-1">NFTs.</span>
         <b>Take</b> <br></br>
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
