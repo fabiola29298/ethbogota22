@@ -82,7 +82,7 @@ const ButtonContainer2 = styled.div`
 `;
 
 const TypeWriterText = () => {
-  const { isOpen, open, close } = useConnectModal();
+  // const { isOpen, open, close } = useConnectModal();
   const { address, isConnected } = useAccount();
   console.log(address);
 
@@ -97,10 +97,13 @@ const TypeWriterText = () => {
       </Title>
       <br></br>
       <ConnectButton />
-      <ButtonContainer>
-        {/* <Button text="Connect Wallet to login" link="https://google.com" /> */}
-        {/* <button onClick={open}>Connect Wallet to login</button> */}
-      </ButtonContainer>
+      {/* <ButtonContainer>
+        <Button text="Connect Wallet to login" link="https://google.com" />
+        <button onClick={open}>Connect Wallet to login</button>
+      </ButtonContainer> */}
+      <br></br>
+      <br></br>
+      <p>{isConnected ? address : "Waiting..."}</p>
       <br></br>
       <br></br>
       <ButtonContainer2>

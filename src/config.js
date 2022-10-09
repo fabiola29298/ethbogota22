@@ -1,4 +1,5 @@
 const INFURA_KEY = "c7d8abb4c4b548519a01e01942d60c14";
+const ContractAddress = "0x963B86136Ecf4ADBe99A6Ae85140C9504A649c21";
 const APP_NAME = "testIM";
 let API_ROOT_URL = "";
 let isProduction = false;
@@ -25,9 +26,6 @@ if (isBrowser()) {
 }
 
 export default {
-  isProduction,
-  isDev,
-  API_ROOT_URL: `${API_ROOT_URL}`,
-  INFURA_KEY,
   APP_NAME,
+  ContractAddress,
 };

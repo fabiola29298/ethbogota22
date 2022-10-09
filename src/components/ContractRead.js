@@ -1,9 +1,8 @@
-import { chains } from "@web3modal/ethereum";
 import { useContractRead } from "@web3modal/react";
 import ABI from "../utils/ABI.json";
 import { useAccount } from "@web3modal/react";
 
-const contractAddress = "0xd0d9Edf148E6cbBA547939514517e82814Dc77BA";
+const contractAddress = "0xd9d14F2bB315Ec2e352FF7b51925ADBd2AA2dF84";
 
 const ContractRead = () => {
   var { address, isConnected } = useAccount();
@@ -13,7 +12,6 @@ const ContractRead = () => {
     addressOrName: contractAddress,
     contractInterface: ABI,
     functionName: "getNFT",
-    chainId: chains.polygonMumbai.id,
   };
   const { data, error, isLoading, refetch } = useContractRead(config);
 
@@ -22,21 +20,10 @@ const ContractRead = () => {
       <section>
         <ul>
           <li>
-            Contract read config: <span>{JSON.stringify(config)}</span>
-          </li>
-          <li>
-            Returned data:{" "}
-            <span>{isLoading ? "Loading..." : JSON.stringify(data)}</span>
-          </li>
-          <li>
             Error: <span>{error ? error.message : "No Error"}</span>
           </li>
         </ul>
-        <button
-          onClick={async () => refetch().then(console.log("Refetch")).finally()}
-        >
-          Refetch data
-        </button>
+        <button onClick={async () => refetch()}>Refetch data</button>
       </section>
     </>
   );

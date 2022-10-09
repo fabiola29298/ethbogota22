@@ -22,31 +22,26 @@ import About from "./components/sections/About";
 import Home from "./components/sections/Home";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import { ConfigOptions } from "@web3modal/react";
+// import { ConfigOptions } from "@web3modal/react";
 import { Web3Modal } from "@web3modal/react";
 import Form2 from "./components/sections/Form2";
 import Wallet from "./components/sections/wallet";
-import CallContract from "./components/CallContract";
-// import ContractRead from "./components/ContractRead";
+import Write from "./components/Write";
+import ContractRead from "./components/ContractRead";
 import { chains, providers } from "@web3modal/ethereum";
 
 const config = {
   projectId: "1ddbee9a91fd7c5851370409ec76d503",
   theme: "dark",
-  accentColor: "magenta",
+  accentColor: "default",
   ethereum: {
     appName: "web3Modal",
     autoConnect: true,
     chains: [chains.polygonMumbai],
   },
-  // providers: [
-  //   providers.walletConnectProvider({
-  //     projectId: "1ddbee9a91fd7c5851370409ec76d503",
-  //   }),
-  // ],
 };
 
-function App({ Component, pageProps }) {
+function App() {
   return (
     <>
       <main>
@@ -56,8 +51,8 @@ function App({ Component, pageProps }) {
           <Navigation />
           <Home />
           <Form2 />
-          <CallContract />
-          {/* <ContractRead /> stillnot working */}
+          <Write />
+          <ContractRead />
           <About />
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}

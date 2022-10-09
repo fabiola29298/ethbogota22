@@ -3,11 +3,10 @@ import { useWaitForTransaction, useContractWrite } from "@web3modal/react";
 import ABI from "../utils/ABI.json";
 import { useAccount } from "@web3modal/react";
 
-const contractAddress = "0xd0d9Edf148E6cbBA547939514517e82814Dc77BA";
+const contractAddress = "0xd9d14F2bB315Ec2e352FF7b51925ADBd2AA2dF84";
 
-const CallContract = () => {
-  var { address, isConnected } = useAccount();
-  address = "0xe61a3def0921b2585e60fd870264990646b30b5c";
+const Write = () => {
+  const { address, isConnected } = useAccount();
   let name = "Laura-Velez";
 
   const config = {
@@ -32,38 +31,18 @@ const CallContract = () => {
     <>
       {/* esta información no se muestra, solo es necesario la confirmación de la transacción */}
       <section>
-        <h1>useSendTransaction / useWaitForTransaction</h1>
-        <p>
-          Note: This example uses avalance fuji testnet, you will need some
-          testnet avax from the faucet
-          <a
-            href="https://faucet.avax.network/"
-            target="_blank"
-            rel="noopener noreferer"
-          >
-            https://faucet.avax.network/
-          </a>
-        </p>
         <ul>
           <li>
-            Request: <span>{JSON.stringify(config)}</span>
-          </li>
-          <li>
-            Send Data:{" "}
-            <span>{isLoading ? "Loading..." : JSON.stringify(data)}</span>
-          </li>
-          <li>
-            Receipt Data:{" "}
-            <span>{isWaiting ? "Waiting..." : JSON.stringify(receipt)}</span>
-          </li>
-          <li>
             Error: <span>{error ? error.message : "No Error"}</span>
+            <span>{isWaiting ? "Waiting..." : JSON.stringify(receipt)}</span>
           </li>
         </ul>
         <button onClick={async () => write()}>Send Transaction</button>
       </section>
+      <br></br>
+      <br></br>
     </>
   );
 };
 
-export default CallContract;
+export default Write;
