@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import Button from '../Button'
 import {dark} from '../../styles/Theme';
 import Loading from '../Loading';
-
+import Formulario from './Formulario';
 
 const Section = styled.section`
 min-height: 100vh;
@@ -164,6 +164,7 @@ const About = () => {
         </ThemeProvider>
         </ButtonContainer>
          </Box>
+        <Formulario></Formulario>
       </Container>
     </Section>
   )

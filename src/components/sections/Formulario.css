@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #f72585;
+  --cor-secundaria: #3f37c9;
+  --cor-confirmar: #7209b7;
+  --cor-cancelar: #fca311;
+  --cor-branco: #fff;
+  --cor-texto-padrao: #333;
+  --cor-background-claro: #eee;
+
+  --sombra-padrao: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  --borda-padrao: 1px solid rgba(0, 0, 0, 0.05);
+  --borda-radius: 5px;
+}
+
+html,
+body {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  color: var(--cor-texto-padrao);
+}
+
+body {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: var(--cor-background-claro, blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ==================== */
+
+.main {
+  width: 680px;
+  background-color: var(--cor-branco);
+  box-shadow: var(--sombra-padrao);
+  border-radius: var(--borda-radius);
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.header__title {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+}
+
+.header__title--primary {
+  color: var(--cor-primaria);
+}
+
+.header__subtitle {
+  font-size: 1rem;
+}
+
+.header__subtitle--secondary {
+  color: var(--cor-secundaria);
+}
+
+/* ==================== */
+
+.form {
+  width: 100%;
+}
+
+.form__input-group--row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form__input-group--spaced {
+  justify-content: space-between;
+}
+
+.form__input-group--footer {
+  margin-top: 1.75em;
+}
+
+.form__button {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.6em;
+  border: none;
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-padrao);
+  color: var(--cor-texto-padrao);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 180ms ease-in-out;
+}
+
+.form__button--confirm {
+  color: var(--cor-branco);
+  background-color: var(--cor-primaria);
+}
+
+.form__button:hover {
+  opacity: 0.55;
+}
+
+.form__button--cancel {
+  background-color: var(--cor-cancelar);
+  color: var(--cor-branco);
+}
