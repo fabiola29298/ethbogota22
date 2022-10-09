@@ -8,11 +8,13 @@ import Inicio from "./components/sections/Inicio";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { Web3Modal } from "@web3modal/react";
+import Wallet from "./components/sections/Wallet";
+import Write from "./components/Write";
+import ContractRead from "./components/ContractRead";
+import { chains } from "@web3modal/ethereum";
 import HumanityProof from "./components/sections/HumanityProof";
-import Wallet  from "./components/sections/Wallet";
 import Mint from "./components/sections/Mint";
 import Yourid from "./components/sections/Yourid";
-
 
 const config = {
   projectId: "1ddbee9a91fd7c5851370409ec76d503",
@@ -20,6 +22,8 @@ const config = {
   accentColor: "default",
   ethereum: {
     appName: "web3Modal",
+    autoConnect: true,
+    chains: [chains.polygonMumbai],
   },
 };
 
@@ -29,21 +33,19 @@ function App() {
       <main>
         <GlobalStyles />
         <ThemeProvider theme={light}>
-
-          {/* <Suspense fallback={<Loading />}> */}
           <Navigation />
           <Inicio />
           <HumanityProof />
           <CreateForm />
-          <Wallet/>
-          <Mint/>
-          <Yourid/>
+          <Wallet />
+          <Mint />
+          <Yourid />
+          <Write />
+          <ContractRead />
           <Footer />
-          {/* <ScrollToTop scrollPosition={y}/> */}
-          <ScrollToTop /> {/* </Suspense> */}
         </ThemeProvider>
       </main>
-      <Web3Modal config={config} /> {/* envía el config al walletconnect */}
+      <Web3Modal config={config} />
     </>
   );
 }
