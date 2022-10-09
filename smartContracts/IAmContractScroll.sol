@@ -13,14 +13,6 @@ contract MVPIAmContract is NFTokenMetadata, Ownable {
         /// @notice Thrown when attempting to reuse a nullifier
         error InvalidNullifier();
 
-    /// @notice Emitted when a profile is verified
-    /// @param profileId The ID of the profile getting verified
-    event ProfileVerified(uint256 indexed profileId);
-
-    /// @notice Emitted when a profile is unverified
-    /// @param profileId The ID of the profile no longer verified
-    event ProfileUnverified(uint256 indexed profileId);
-
     // @dev The World ID instance that will be used for verifying proofs
     //IWorldID internal immutable worldId;
 
@@ -29,10 +21,6 @@ contract MVPIAmContract is NFTokenMetadata, Ownable {
 
     // @dev The World ID Action ID
     //uint256 internal immutable actionId;
-
-    /// @notice Whether a profile is verified
-    /// @dev This also generates an `isVerified(uint256) getter
-    mapping(uint256 => bool) public isVerified;
 
     /// @dev Connection between nullifiers and profiles. Used to correctly unverify the past profile when re-verifying.
     mapping(uint256 => uint256) internal nullifierHashes;
@@ -64,7 +52,7 @@ contract MVPIAmContract is NFTokenMetadata, Ownable {
         uint256 nullifierHash,
         uint256[8] calldata proof,
         */
-        string calldata _uri
+        string calldata _metadata
     ) public 
     /*payable*/ 
     {
@@ -87,10 +75,10 @@ contract MVPIAmContract is NFTokenMetadata, Ownable {
 
         //mint
         super._mint(msg.sender, uint256(uint160(msg.sender)));
-        super._setTokenUri(uint256(uint160(msg.sender)), _uri);
+        super._setTokenUri(uint256(uint160(msg.sender)), _metadata);
     }
 
-    function getNFT() public view  returns (string memory){
-        return super._tokenURI(uint256(uint160(msg.sender)));
+    function getNFT(address owner) public view  returns (string memory){
+        return super._tokenURI(uint256(uint160(owner)));
     }
 }
