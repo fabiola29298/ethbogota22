@@ -13,7 +13,7 @@ function PersonalInfo({ formData, setFormData }) {
         <TextInput titulo="Last Name* " nome="lastName" />
         <TextInput titulo="Etnicity" nome="etnicity" />
         <TextInput titulo="Birth date* " nome="birthDate" />
-        <Button text="Upload ID photo" link="#" />
+        <Button text="Create ID" link="#Wallet" />
         <FormFooter>
           <Button text="Submit" link="#" />
         </FormFooter>

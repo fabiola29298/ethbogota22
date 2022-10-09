@@ -94,11 +94,11 @@ const TypeWriterText = () => {
 
       <br></br>
     <ButtonContainer>
-        <Button text="Connect Wallet to login" link="https://google.com" />
+        <Button text="Connect Wallet to login" link="#Inicio" />
     </ButtonContainer>
     <br></br>
       <ButtonContainer2>
-        <Button text="Create ID" link="https://google.com" />
+        <Button text="Create ID" link="#HumanityProof" />
       </ButtonContainer2>
     <br></br>
 
