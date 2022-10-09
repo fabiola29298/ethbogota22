@@ -26,19 +26,24 @@ import { ConfigOptions } from "@web3modal/react";
 import { Web3Modal } from "@web3modal/react";
 import Form2 from "./components/sections/Form2";
 import Wallet from "./components/sections/wallet";
-import { Web3ReactProvider } from "@web3-react/core";
-import Web3 from "web3";
+import CallContract from "./components/CallContract";
+// import ContractRead from "./components/ContractRead";
+import { chains, providers } from "@web3modal/ethereum";
 
-function getLibrary(provider) {
-  return new Web3(provider);
-}
 const config = {
   projectId: "1ddbee9a91fd7c5851370409ec76d503",
   theme: "dark",
-  accentColor: "default",
+  accentColor: "magenta",
   ethereum: {
     appName: "web3Modal",
+    autoConnect: true,
+    chains: [chains.polygonMumbai],
   },
+  // providers: [
+  //   providers.walletConnectProvider({
+  //     projectId: "1ddbee9a91fd7c5851370409ec76d503",
+  //   }),
+  // ],
 };
 
 function App({ Component, pageProps }) {
@@ -51,7 +56,8 @@ function App({ Component, pageProps }) {
           <Navigation />
           <Home />
           <Form2 />
-          {/* <Wallet /> */}
+          <CallContract />
+          {/* <ContractRead /> stillnot working */}
           <About />
           <Footer />
           {/* <ScrollToTop scrollPosition={y}/> */}

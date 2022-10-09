@@ -4,7 +4,7 @@ import Button from "./Button";
 import ButtonWhite from "./ButtonWhite";
 import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
 import { ConnectButton, useConnectModal } from "@web3modal/react";
-import { useAccount } from "@web3modal/ethereum";
+import { useAccount } from "@web3modal/react";
 
 const widgetProps = {
   actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
@@ -83,6 +83,8 @@ const ButtonContainer2 = styled.div`
 
 const TypeWriterText = () => {
   const { isOpen, open, close } = useConnectModal();
+  const { address, isConnected } = useAccount();
+  console.log(address);
 
   return (
     <>
@@ -92,15 +94,14 @@ const TypeWriterText = () => {
         <b>control</b> <br></br>
         <b>of </b> your <br></br>
         Identity <br></br>
-        and future
       </Title>
-
       <br></br>
-      {/* <ConnectButton /> */}
+      <ConnectButton />
       <ButtonContainer>
         {/* <Button text="Connect Wallet to login" link="https://google.com" /> */}
-        <button onClick={open}>Connect Wallet to login</button>
+        {/* <button onClick={open}>Connect Wallet to login</button> */}
       </ButtonContainer>
+      <br></br>
       <br></br>
       <ButtonContainer2>
         <Button text="Create ID" link="https://google.com" />
