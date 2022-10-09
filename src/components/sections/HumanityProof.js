@@ -1,12 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import Button from '../Button'
-import { dark } from '../../styles/Theme';
-import Loading from '../Loading';
-import Formulario from './Formulario';
 import Worldcoin from './Worldcoin';
-import MultiplePage from "../MultiplePage";
 import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
 
 const widgetProps = {

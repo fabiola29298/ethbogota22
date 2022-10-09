@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import ButtonWhite from "./ButtonWhite";
-import { WorldIDWidget, WidgetProps } from "@worldcoin/id";
-import { ConnectButton, useAccount } from "@web3modal/react";
-
 const widgetProps = {
   actionId: "wid_staging_1d06a5e9e420ca26e7cb10d444e8298b",
   signal: "user-id-1",
